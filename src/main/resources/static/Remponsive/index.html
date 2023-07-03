@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="./logo.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="" class="active">HOGAR</a>
+                    </li>
+                    <li>
+                        <a href="">PRODUCTOS</a>
+                    </li>
+                    <li>
+                        <a href="">PRECIOS</a>
+                    </li>
+                    <li>
+                        <a href="">ACERCA DE</a>
+                    </li>
+                    <li>
+                        <a href="">INFO@VIRUS.COM</a>
+                    </li>
+                </ul>
+                <div class="login-signup">
+                    <a href="">INICIO</a> or <a href="">REGISTRATE</a>
+                </div>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="login-signup">
+                <a href="">INICIO</a> or <a href="">REGISTRATE</a>
+            </div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        nav = document.querySelector("nav");
+
+        hamburger.onclick = function() {
+            nav.classList.toggle("active");
+        }
+    </script>
+    
+</body>
+</html>

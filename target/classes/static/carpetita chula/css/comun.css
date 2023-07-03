@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../images/lib.avif);
+}
+
+/*---------------------------------- NAV -----------------------------------------------*/
+
+header{
+    width: 100%;
+    height: 61rem;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.barra{
+    padding: 0.7rem 0rem 0rem;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    background-color: transparent;
+    transition: all 0.5s ease;
+    justify-content: space-between;
+}
+
+.barra.active{
+    padding-top: 5px;
+    padding-bottom: 7px;
+    background: rgb(1, 29, 58);
+    /*border-radius: 0 0 1rem 1rem;*/
+}
+
+.barra.active .div_logo,
+.barra.active a{
+    padding-top: 0rem;
+    color: #fff;
+}
+
+.barra.active a:hover{
+    background: #fff;
+    color: #e40202;
+}
+
+
+
+.div_logo {
+    display: flex;
+    color: black;
+    font-weight: bold;
+    margin-left: 1rem;
+
+}
+
+.div_logo h2{
+    font-size: 1.5rem;
+}
+
+.menu{
+    display: flex;
+    margin-left: 50%;
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu li a{
+    color: #000;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    text-decoration:none;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    padding: 0.3rem 0.3rem 0.3rem 0.3rem;
+}
+
+.menu li a:hover{
+
+    padding: 0.3rem 0.6rem;
+    color: #fff;
+    background-color: #000;
+    border-radius: 15px;
+
+}
+
+.scrol{
+    height: 0rem;
+}
+
+
+/*---------------------------------- PALABRA DE TRANSFONDO? -----------------------------------------------*/
+
+.eest h1{
+    text-align: center;
+    margin-top: -3%;
+    padding-top: 20rem;
+    font-size: 4rem;
+    
+}
+
+.eests{
+    text-align: center;
+    margin-top: -70px;
+    padding-top: 20rem;
+    font-size: 2rem;
+    justify-self: center;
+}
+
+.eest h3{
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+/*---------------------------------- MAIN -----------------------------------------------*/
+
+main{
+    height: 100%;
+    width: 100%;
+    /*margin: auto;*/
+    background: #fff;
+    align-items: center;
+}
+
+
+/*-------------------------------------FOOTER--------------------------------------------------------*/
+
+.futer{
+    display: flex;
+    width: 100%;
+    height: 15rem;
+    background-color: rgb(1, 29, 58);
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 15rem;
+    background-color: rgb(1, 29, 58);
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+footer ul{
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li{
+    position: relative;
+    list-style: none;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+footer ul li a{
+    text-decoration: none;
+}
+
+footer ul li .fa{
+    font-size: 2.3em;
+    color: #414040;
+}
+footer ul li a .fa:hover{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+footer ul li::before{
+    position: absolute;
+    font-family: FontAwesome;
+    top: -0.1rem;
+    left: 0;
+    font-size: 2.3em;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+}
+
+footer ul li:nth-child(1)::before{
+    content: '\f099';
+    color: #1da1f2;
+    
+}
+
+footer ul li:nth-child(2)::before{
+    content: '\f232';
+    color: #25d366;
+    
+}
+
+footer ul li:nth-child(3)::before{
+    content: '\f16a';
+    color: #ff0000;
+    
+}
+footer ul li:nth-child(4)::before{
+    content: '\f16d';
+    color: #ee1493;
+    
+}
+
+footer ul li:hover::before{
+    height: 110%;
+}
+
+footer h4{
+    display: flex;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .redes{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.left {
+    border-top: 2px solid #a8a8a8;
+    height: 2px;
+    width: 25%;
+}
+
+.right {
+    border-top: 2px solid #a7a7a7;
+    height: 2px;
+    width: 25%;
+}

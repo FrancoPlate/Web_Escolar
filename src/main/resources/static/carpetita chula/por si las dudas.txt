@@ -1,0 +1,256 @@
+tarjeta que gira y muestra contenido 
+
+HTML
+<-----------------------------
+
+<div class="wrap">
+    <div class="tarjeta-wrap">
+        <div class="tarjeta">
+            <div class="adelante card3"></div>
+                <div class="atras">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ex velit beatae. Illum, suscipit, aspernatur!</p>
+                </div>
+        </div>
+    </div>
+</div>
+
+----------------------->
+
+CSS
+<-----------------------------
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+.wrap{
+    width: 1100px;
+    margin: 50px auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+  
+  .tarjeta-wrap{
+    margin: 10px;
+    -webkit-perspective: 800;
+    perspective: 800;
+}
+  
+  .tarjeta{
+    width: 300px;
+    height: 350px;
+    background: #F29720;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: .7s ease;
+    transition: .7s ease;
+    -webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+    box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+  
+}
+  
+  .adelante, .atras{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+  
+  .adelante{
+    width: 100%;
+}
+  
+  .atras{
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  
+    padding: 15px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  
+    text-align: center;
+    color: #fff;
+    font-family: "open sans";
+    background: #F29720;
+}
+  
+  .tarjeta-wrap:hover .tarjeta{
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+  
+  .card3{
+    
+    background-image:url(entero.png);
+    background-size: cover;
+}
+
+----------------------->
+
+
+
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+tarjeta con desplazamiento hacia adelante
+
+HTML
+<-----------------------------
+
+<div class="contenedor">
+
+    <article class="card">
+
+        <div class="card-img" id="producto-01"></div>
+
+        <div class="card-txt">
+            <h3>Producto 01</h3>
+            <a href="#" class="btn">Ver más</a>
+        </div>
+    </article>
+    
+    <article class="card">
+
+        <div class="card-img" id="producto-02"></div>
+
+        <div class="card-txt">
+            <h3>Producto 02</h3>
+            <a href="#" class="btn">Ver más</a>
+        </div>
+    </article>
+
+    <article class="card">
+
+        <div class="card-img" id="producto-03"></div>
+
+        <div class="card-txt">
+            <h3>Producto 03</h3>
+            <a href="#" class="btn">Ver más</a>
+        </div>
+    </article>
+
+    <article class="card">
+
+        <div class="card-img" id="producto-04"></div>
+        
+        <div class="card-txt">
+            <h3>Producto 04</h3>
+            <a href="#" class="btn">Ver más</a>
+        </div>
+    </article>
+</div>
+
+---------------------------->
+
+
+CSS
+<-----------------------------
+
+.contenedor {
+	display: grid;
+
+
+    /* 	-------------AL USAR GRID, LA ULTIMA FILA NO QUEDA CENTRADA-------------
+    GRID-TEMPLATE-COLUMNS: Esta propiedad de GRID crea las columnas de la grilla.
+    -REPEAT-> (cantidad de columnas, misma medida) -> repeat(2,200px) crea 2 columnas/filas de 200px.
+    -AUTO-FIT-> GRID CREA TANTAS COLUMNAS COMO ITEMS.
+    -AUTO-FIT-> PUEDE CAMBIARSE POR AUTO-FILL QUE SIGUE CREANDO COLUMNAS AUNQUE YA USO TODOS LOS ITEMS.
+    -MINMAX-> CADA COLUMNA TIENE COMO MÍNIMO XXX y COMO MÁXIMO UNA FRACCIÓN*/
+
+	/* 	repeat (numero de veces que repite, medida) */
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 2em;
+}
+
+/* TARJETAS CON FLEX*/
+.card {
+	display: flex;
+	flex-flow: column;
+	border-radius: 0.3em;
+	overflow: hidden; /*PARA QUE LA FOTO TENGA EL BORDER-RADIUS ARRIBA*/
+	box-shadow: 0 10px 25px -10px black;
+
+	transition: 300ms ease-in-out; /* TRANSICIÓN PARA EL EFECTO DEL :HOVER */
+	
+}
+
+/* TARJETA CRECE DE TAMAÑO CON HOVER */
+.card:hover {
+	transform: scale(1.05);
+	box-shadow: 0 15px 35px -10px black;
+}
+
+.card-img {
+	width: 100%;
+	flex-basis: 200px; /* FLEX SE USA PARA DARLE UN ALTO MINIMO DE 200PX A LA IMAGEN */
+}
+
+/* ID PARA DAR LAS IMAGENES DE CADA TARJETA */
+#producto-01 {
+	background: url("")
+		no-repeat 50% 20% / cover;
+}
+
+#producto-02 {
+	background: url("")
+		no-repeat 50% 60% / cover;
+}
+
+#producto-03 {
+	background: url("")
+		no-repeat 50% 60% / cover;
+}
+
+#producto-04 {
+	background: url("")
+		no-repeat 50% 60% / cover;
+}
+
+----------------------------->
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+HTML
+<-----------------------------
+
+
+---------------------------->
+
+
+CSS
+<-----------------------------
+
+
+----------------------------->

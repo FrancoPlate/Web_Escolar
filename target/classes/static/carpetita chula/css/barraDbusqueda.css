@@ -1,0 +1,85 @@
+.buscar {
+    position: relative;
+    display: flex;
+    width: 60px;
+    height: 50px;
+    transition: 0.5s;
+    
+}
+.buscar:hover {
+    width: 300px;
+}
+
+.buscar::before{
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 50px;
+    z-index: 1;
+    background: linear-gradient(#272675, #1226d885, #0400df);
+    filter: blur(1px);
+}
+
+.buscar::after{
+    position: absolute;
+    content: '';
+    right: -1px;
+    width: 10px;
+    height: 50px;
+    z-index: 1;
+    filter: blur(1px);
+}
+
+
+
+.buscar input {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 1.1em;
+    padding: 0.5em 20px;
+    background: linear-gradient(#2c11c549, #c0171700);
+    color: #8f0d0d93;
+}
+
+.buscar input::placeholder,
+.buscar input
+ {
+     color: transparent;
+}
+
+.buscar input:hover::placeholder,
+.buscar input:hover {
+ color: #bbacac;
+}
+
+
+.sombra {
+    position: absolute;
+    width: calc(100% + 50px);
+    height: 300px;
+    top:0;
+    left: -50px;
+    transform-origin: top;
+    transform: skew(45deg);
+    pointer-events: none;
+}
+
+.sombra::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+}
+
+ion-icon {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #3700ff;
+}

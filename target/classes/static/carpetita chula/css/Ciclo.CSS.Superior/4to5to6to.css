@@ -1,0 +1,50 @@
+.container1{
+    width: 90%;
+    margin: auto;
+    margin-left: 12%;
+}
+
+.container1 ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.container1 ul li{
+    list-style: none;
+   /*width: 43%;*/
+    width: 80%;
+    background: rgba(159, 166, 231, 0.438);
+    margin :20px 0px 20px 55px; 
+    border:2px solid rgb(0, 0, 0);
+    box-sizing: border-box;
+}
+
+
+.container1 ul li .bottom{
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+    background: rgb(0, 81, 255);    
+    text-align: center;
+    color:white;
+    font-size: 20px;
+   
+}
+
+.container1 ul li .butom1{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+    background: rgba(0, 47, 255, 0.767);  
+    color:white;
+    font-size: 20px;
+   
+}
+
+.container1 ul li .center{
+    margin-left: 10%;
+}
+
